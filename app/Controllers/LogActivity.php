@@ -40,7 +40,7 @@ class LogActivity extends BaseController
                 'index' => 0 
             ];
 
-            return view('pages/logactivity', $data);
+            return view('pages/log_activity', $data);
             
         } elseif (session()->get('level') > 0) {
             return redirect()->to('home/error');

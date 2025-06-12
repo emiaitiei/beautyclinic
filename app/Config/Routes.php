@@ -101,7 +101,19 @@ $routes->post('product/empty_trash', 'Product::empty_trash');
 $routes->get('/user', 'User::index');
 $routes->get('user/reset_user/(:num)', 'User::reset_user/$1');
 
-$routes->get('/logactivity', 'LogActivity::index');
+$routes->get('/laporan_booking', 'LaporanBooking::index');
+$routes->post('/laporan_booking/printlaporanbooking', 'LaporanBooking::printlaporanbooking');
+$routes->post('/laporan_booking/pdflaporanbooking', 'LaporanBooking::pdflaporanbooking');
+
+$routes->get('/laporan_penjualan_produk', 'LaporanPenjualanProduk::index');
+$routes->post('/laporan_penjualan_produk/printlaporanpenjualanproduk', 'LaporanPenjualanProduk::printlaporanpenjualanproduk');
+$routes->post('/laporan_penjualan_produk/pdflaporanpenjualanproduk', 'LaporanPenjualanProduk::pdflaporanpenjualanproduk');
+
+$routes->get('/laporan_pembayaran', 'LaporanPembayaran::index');
+$routes->post('/laporan_pembayaran/printlaporanpembayaran', 'LaporanPembayaran::printlaporanpembayaran');
+$routes->post('/laporan_pembayaran/pdflaporanpembayaran', 'LaporanPembayaran::pdflaporanpembayaran');
+
+$routes->get('/log_activity', 'LogActivity::index');
 
 $routes->get('/setting', 'Setting::index');
 $routes->post('/setting/update', 'Setting::update');

@@ -196,13 +196,65 @@
                 <span class="sidebar-mini-icon">
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
+                <h4 class="text-section">Laporan</h4>
+            </li>
+
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#base5">
+                <i class="fas fa-clipboard-list"></i>
+                <p>Laporan</p>
+                <span class="caret"></span>
+                </a>
+                <div class="collapse" id="base5">
+                    <ul class="nav nav-collapse">
+
+                        <li>
+                            <a
+                            href="<?= base_url('laporan_booking') ?>"
+                            aria-expanded="false"
+                            >
+                            <i class="fas fa-list-alt"></i>
+                            <p>Laporan Booking</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                            href="<?= base_url('laporan_penjualan_produk') ?>"
+                            aria-expanded="false"
+                            >
+                            <i class="fas fa-store"></i>
+                            <p>Laporan Penjualan Produk</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                            href="<?= base_url('laporan_pembayaran') ?>"
+                            aria-expanded="false"
+                            >
+                            <i class="fas fa-credit-card"></i>
+                            <p>Laporan Pembayaran</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <?php endif; ?>
+
+            <?php if ($level == 1 || $level == 2):?>
+            <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </span>
                 <h4 class="text-section">Setting</h4>
             </li>
 
                 <?php if ($level == 2):?>
                     <li class="nav-item">
                         <a
-                        href="<?= base_url('logactivity') ?>"
+                        href="<?= base_url('log_activity') ?>"
                         aria-expanded="false"
                         >
                         <i class="fas fa-address-card"></i>
